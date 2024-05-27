@@ -32,7 +32,7 @@ PART 3 : Create a resource group and a workspace
 az group create --name $GROUP --location $LOCATION
 
 # Create a workspace
-az ml workspace create -w $WORKSPACE -g $GROUP -l $LOCATION
+az ml workspace create --name=$WORKSPACE --resource-group=$GROUP --location=$LOCATION
 
 # set default configuratons
 az configure --defaults group=$GROUP workspace=$WORKSPACE location=$LOCATION
@@ -55,6 +55,6 @@ PART 4 : Force cleaning all the resource group
 """
 
 # Clean up
-az group delete --name $GROUP --yes --no-wait
+#az group delete --name $GROUP --yes --no-wait
 
 
